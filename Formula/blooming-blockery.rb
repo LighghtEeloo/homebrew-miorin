@@ -5,21 +5,21 @@ class BloomingBlockery < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/photonfoxlime/bb/releases/download/v0.0.4/blooming-blockery-aarch64-apple-darwin.tar.xz"
-      sha256 "8bbd591360f03c46379dec24020941c0138204f7b19612fe4d94d8064390c2dd"
+      sha256 "0be71fd35280208acb0362a9aa2ca92797f2b3e348ee3f57122c47f0bcfe2446"
     end
     if Hardware::CPU.intel?
       url "https://github.com/photonfoxlime/bb/releases/download/v0.0.4/blooming-blockery-x86_64-apple-darwin.tar.xz"
-      sha256 "82e74c5c2521a297b363d7526b09562c544c929f85ee39c4c9de8e1d3152b9fe"
+      sha256 "40f26ee1862479e2789be0e94cf6f3f7a3e7f21827b6888ea584218210d1670b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/photonfoxlime/bb/releases/download/v0.0.4/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1d4e926a7a253b2b07cd0b3a2513db2c9cfe10e0d8e5d573388d23204e31c3fd"
+      sha256 "393e5f4e8b9ae4343bcde605727ddf41e5d1dd8196bd32308d8a35d0a6e5d9b0"
     end
     if Hardware::CPU.intel?
       url "https://github.com/photonfoxlime/bb/releases/download/v0.0.4/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c4d144dec990aafaf29119da9abb27864d1235028e7187afe65e54d0d40de393"
+      sha256 "bd75857306b3306fc370e9d39363b5e0396164b67fcbc65f6729c4f14fd16dac"
     end
   end
   license "MIT"
