@@ -1,28 +1,28 @@
 class BloomingBlockery < Formula
   desc "A structured document editor for designers and developers."
   homepage "https://github.com/photonfoxlime/bb"
-  version "0.0.9"
+  version "0.0.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.9/blooming-blockery-aarch64-apple-darwin.tar.xz"
-      sha256 "57bcf0df0bb49bf39f7ad84393285dfd6f1085f8025003e6022d23e383798d17"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.10/blooming-blockery-aarch64-apple-darwin.tar.xz"
+      sha256 "5423cac7bf33d5ba5337fb8fefc1bea00bc4001274205da0a75d85fbbcfb7a8c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.9/blooming-blockery-x86_64-apple-darwin.tar.xz"
-      sha256 "8a877d3b7640d76a6dd3700df29fad44edff4b419f5d1df9a75d18786789bfb6"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.10/blooming-blockery-x86_64-apple-darwin.tar.xz"
+      sha256 "73f21fc354507763b5780fda4fa6efbc0334917f559f9a1985a2882bb32c73ba"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.9/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1d41ef9d942c1657e43a955700e16ea1e243267aac5b2aed1a476e2185181297"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.10/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "36a8ec6733d46ebbb99d844d4f71c9f48ce6cf29ab5c949ecfac779de2bc907e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.9/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "364a170e1dff8477a057a4c36e0c4975e9e6fae5bb84cd14f57a66544abda445"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.10/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "28d03d3f105b142a56be6178d03fc4feca61480f15c2f7063b8f2b7d635946a4"
     end
   end
-  license "MIT"
+  license "Apache-2.0"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
@@ -48,10 +48,10 @@ class BloomingBlockery < Formula
   end
 
   def install
-    bin.install "blooming-blockery" if OS.mac? && Hardware::CPU.arm?
-    bin.install "blooming-blockery" if OS.mac? && Hardware::CPU.intel?
-    bin.install "blooming-blockery" if OS.linux? && Hardware::CPU.arm?
-    bin.install "blooming-blockery" if OS.linux? && Hardware::CPU.intel?
+    bin.install "bb", "blooming-blockery" if OS.mac? && Hardware::CPU.arm?
+    bin.install "bb", "blooming-blockery" if OS.mac? && Hardware::CPU.intel?
+    bin.install "bb", "blooming-blockery" if OS.linux? && Hardware::CPU.arm?
+    bin.install "bb", "blooming-blockery" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
