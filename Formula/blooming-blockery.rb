@@ -1,25 +1,25 @@
 class BloomingBlockery < Formula
   desc "A structured document editor for designers and developers."
   homepage "https://github.com/photonfoxlime/bb"
-  version "0.0.13"
+  version "0.0.14"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.13/blooming-blockery-aarch64-apple-darwin.tar.xz"
-      sha256 "65a3a156bd538d5ed7b1ac5f9e6ffdb0faf4910ee00668ddef175de883a9c4b3"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.14/blooming-blockery-aarch64-apple-darwin.tar.xz"
+      sha256 "821dff3cb133f9c6951849a712d7cd00458038f5f596825f8c31aedf9848e3ba"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.13/blooming-blockery-x86_64-apple-darwin.tar.xz"
-      sha256 "b0f51e2636d6a43ab08c2c82f6237c900e3a073d6860730ede23e097cadadbed"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.14/blooming-blockery-x86_64-apple-darwin.tar.xz"
+      sha256 "cd6f4c63b91b8588fabe0137c2924f37367855fe003da1030db5507f3594f65e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.13/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "32de41ccee49ad469e62a8a299b27c756fadc90b270528aaa712559126d91918"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.14/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "145aab8e5f996a8441c78a957bb75b05d123da3d93115106e6b0ea37f2d5d418"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.13/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "714c556854f9890225bc26d3c5ae9188cb30c53a501490c0dd935a1eb0de04a2"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.14/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ce2d67dd39ce88f121678a93efc68bb882268c3d2b98ab2292e85196e30df656"
     end
   end
   license "Apache-2.0"
