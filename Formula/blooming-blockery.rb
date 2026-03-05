@@ -1,19 +1,19 @@
 class BloomingBlockery < Formula
   desc "A structured document editor for designers and developers."
   homepage "https://github.com/photonfoxlime/bb"
-  version "0.0.17"
+  version "0.0.18"
   if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.17/blooming-blockery-aarch64-apple-darwin.tar.xz"
-      sha256 "b214185172148fb269c997b881e6704bee8730694737515b23d1926339301853"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.18/blooming-blockery-aarch64-apple-darwin.tar.xz"
+      sha256 "2751792cc898c328dd880db0fab4e38d73f38aa72330618d7a100723ca52774c"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.17/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c08e6281152e82ccd6db682a1d1920b9308627e6c5f1fea17da5534d7cbeb2a6"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.18/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "205d8a2a1c8bb91d65105af1b33ae47d3374e4f8fd7df7661759786afc0162f2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.17/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "08407bfbfffab4e52454a96b2c0e3a4a65aaea3eaef2d1c8a244c60cbe6dfd33"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.18/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cf69703412026e0056d7600a7e1cad585b4944a7d0cdac00a67076dc49d47cb9"
     end
   end
   license "Apache-2.0"
