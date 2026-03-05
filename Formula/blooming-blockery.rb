@@ -1,25 +1,19 @@
 class BloomingBlockery < Formula
   desc "A structured document editor for designers and developers."
   homepage "https://github.com/photonfoxlime/bb"
-  version "0.0.15"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.15/blooming-blockery-aarch64-apple-darwin.tar.xz"
-      sha256 "fa33e87bec88ab45d70c6d03a8cf814888af074a4c527fe47110ad909001962d"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.15/blooming-blockery-x86_64-apple-darwin.tar.xz"
-      sha256 "3db7eab160d6e311d632d2dab7a5bab9595d8f1cf3ea345c1da7bba3c0161339"
-    end
+  version "0.0.16"
+  if OS.mac? && Hardware::CPU.arm?
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.16/blooming-blockery-aarch64-apple-darwin.tar.xz"
+      sha256 "0ca900821f01e3a5f440c6f50bb702dcfb6ea4838b1194cc4eb49e01042812f8"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.15/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "385e6f4083c5ee256423a6d473cd62bf081a3d39c059a97a79780284175b1716"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.16/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "134769ccaa55c51a5d795c68ec103ec21c54a101f1a4452ef7c2274fdc1239eb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.15/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1507fe110e62015f26a290056abd2dcb791e37f4b581f0cd092b5def0aae47b7"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.16/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4cb915579a33c26a5d7474231c9598535965f8f313980556ee130a1d2310cffb"
     end
   end
   license "Apache-2.0"
@@ -27,7 +21,6 @@ class BloomingBlockery < Formula
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
     "x86_64-pc-windows-gnu":     {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
@@ -49,7 +42,6 @@ class BloomingBlockery < Formula
 
   def install
     bin.install "bb", "blooming-blockery" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bb", "blooming-blockery" if OS.mac? && Hardware::CPU.intel?
     bin.install "bb", "blooming-blockery" if OS.linux? && Hardware::CPU.arm?
     bin.install "bb", "blooming-blockery" if OS.linux? && Hardware::CPU.intel?
 
