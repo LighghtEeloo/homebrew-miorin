@@ -1,19 +1,19 @@
 class BloomingBlockery < Formula
   desc "A structured document editor for designers and developers."
   homepage "https://github.com/photonfoxlime/bb"
-  version "0.0.21"
+  version "0.0.22"
   if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.21/blooming-blockery-aarch64-apple-darwin.tar.xz"
-      sha256 "64089f9c2e113b8f0b7be6e06a1b473f0c05a757c929583a72d7b0e1dec7d3b9"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.22/blooming-blockery-aarch64-apple-darwin.tar.xz"
+      sha256 "bf1c2857e58578773c501a50504ba3b44110e1fb5b22b913c25d041804f6108a"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.21/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d0368b1b6f8c9fa536d3ba2c07f882aed4fde6e43f36e0c6e0fe063f9cd63f46"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.22/blooming-blockery-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c12275293f11696847aa51e2c0b43a8ea31e3e6167a4e4ca454a98e2215c6251"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.21/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4770d503d1b2a7da29c38fdc3bbd1bccfd2b1cfef89a450943e949f94f11d5b6"
+      url "https://github.com/photonfoxlime/bb/releases/download/v0.0.22/blooming-blockery-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5d43a89a7e408eafdc25439a819503aa21dfdad673f50dadee216b1b003bb202"
     end
   end
   license "Apache-2.0"
@@ -41,9 +41,9 @@ class BloomingBlockery < Formula
   end
 
   def install
-    bin.install "bb", "blooming-blockery" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bb", "blooming-blockery" if OS.linux? && Hardware::CPU.arm?
-    bin.install "bb", "blooming-blockery" if OS.linux? && Hardware::CPU.intel?
+    bin.install "blooming-blockery" if OS.mac? && Hardware::CPU.arm?
+    bin.install "blooming-blockery" if OS.linux? && Hardware::CPU.arm?
+    bin.install "blooming-blockery" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
